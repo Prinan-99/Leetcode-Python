@@ -1,0 +1,12 @@
+class Solution:
+    def restoreString(self, s: str, indices: List[int]) -> str:
+        index={}
+        for i,items in enumerate(indices):
+            index[items]=s[i]
+        print (index)
+        indices.sort()
+        res=""
+        for i in range(len(indices)):
+            res=res+index[indices[i]]
+
+        return res
